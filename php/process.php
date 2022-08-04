@@ -13,6 +13,7 @@
     if(isset($_SESSION['csvFileName'])){
         $filePath = "../uploads/".$_SESSION['csvFileName'];
     }
+    // setting initial format of the csv content
     function formatData($f){
         $fileName = fopen($f, "r");
         $data = [];
