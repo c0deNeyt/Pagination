@@ -1,5 +1,6 @@
 <?php
-include('php/process.php');
+  include('php/process.php');
+  session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +28,7 @@ include('php/process.php');
             <div class="col-sm-10">
               <input type="hidden" name="uploadAction" value="up">
               <input name="fileUpload" type="file" hidden>
-<?=
+<?php
                 isset($_SESSION['fileVal'])? $val = $_SESSION['fileVal'] : $val = false;
 ?>
 <?=

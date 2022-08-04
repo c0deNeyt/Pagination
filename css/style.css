@@ -55,7 +55,7 @@ div.wrapper {
 	max-width: var(--s7);
 	padding: 3rem;
 	background-color: #ffffff91;
-	margin: 5rem auto;
+	margin: 2rem auto;
 	box-shadow: var(--shadow);
 	border-radius: 1rem;
 	background-image: url(../image/v88icon.png);
@@ -164,4 +164,18 @@ table {
 .pageCountWrapper {
 	text-align: center;
     padding: 1rem 0 0 0 ;
+}
+.home {
+	position: sticky;
+	top: 4rem;
+	left: 33rem;
+	text-decoration: none;
+	color: var(--bs-black-rgb);
+	background: #97a7fb;
+	padding: 0.313rem;
+	border-radius: 0.5rem;
+}
+.home:hover {
+	color: #4612ff;
+	font-size: 17px;
 }

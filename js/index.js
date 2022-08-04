@@ -21,7 +21,6 @@ $('input[type="file"]').change(function(e) {
 $("a.fileName").click(function () {
     let fileName = $(this).text();
     $("input.fileName").val(fileName);
-    console.log($("input.fileName"));
     $("input.gotoPrev").click();
  });
 

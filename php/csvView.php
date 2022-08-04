@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
+      <a class="home" href="../index.php">HOME</a>
         <div class="wrapper">
         <h5 class="tittle">CSV File Data</h5>
         <form action="" method="get">
