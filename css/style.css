@@ -1,0 +1,167 @@
+/*===========================
+    MY PRESETS
+=============================*/
+:root{
+    --ff: "Nunito", Arial, Helvetica, sans-serif;
+    --ff-1: "sourceSans", Arial, Helvetica, sans-serif;
+    --ff-2: "breeSerif", Arial, Helvetica, sans-serif;
+    --s1: 0.063rem;
+    --primary-clr: #2225560;
+    --s2: calc(var(--s1) * 2);
+    --s3: calc(var(--s2) * 3);
+    --s4: calc(var(--s3) * 4);
+    --s5: calc(var(--s4) * 5);
+    --s6: calc(var(--s5) * 6);
+    --s7: calc(var(--s6) / 2 * 2);
+    --s8: calc(var(--s7) * 2);
+    --s9: calc(var(--s8) / 2 *2);
+    --s10: calc(var(--s9)* 2);
+
+    --shadow: 0 0 1em rgba(0,0,0, .25);
+ }
+/*===========================
+    IMPORTED FONTS
+=============================*/
+@font-face {
+    font-family: "Nunito";
+    src: url("../font/Nunito/Nunito-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "sourceSans";
+    src: url("../font/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+}
+@font-face {
+    font-family: "breeSerif";
+    src: url("../font/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+}
+/*===========================
+    BODY WITH RESET
+=============================*/
+*{
+    /* outline: 3px solid limegreen !important; */
+    /* background: rgb(0 100 0 /0.1) !important; */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--ff);
+}
+body{
+    background-color: #ccccff ;
+}
+/*===========================
+   MAIN DIVISION STARTS HERE
+=============================*/
+div.wrapper {
+	max-width: var(--s7);
+	padding: 3rem;
+	background-color: #ffffff91;
+	margin: 5rem auto;
+	box-shadow: var(--shadow);
+	border-radius: 1rem;
+	background-image: url(../image/v88icon.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+    .uploaded {
+        padding: 2rem 7rem;
+    }
+        div.uploaded p {
+            font-size: 1.5rem;
+        }
+    h5.tittle {
+        padding: 0 0 2rem 0;
+        margin: 0 5rem;
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: var(--ff);
+        text-shadow: 0 4px 11px rgba(0,0,0,0.29);
+        color: #6b6de8f5;
+        text-align: center;
+    }
+    .errorField {
+        min-width: 70%;
+        background-color: #ff76761c;
+        padding: 0.625rem;
+        margin: 1rem;
+        border-radius: 0.313rem;
+        color: #9b0a0a;
+        position: relative;
+    }
+    .successMsg {
+        min-width: 70%;
+        background-color: #26ae005e;
+        padding: 0.625rem;
+        margin: 1rem;
+        border-radius: 0.62rem;
+        color: #f9f9f9;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+        /* .blink_me {animation: blinker 1s linear infinite;} */
+        @keyframes blinker {50% { opacity: 0.4; }}
+
+        div.errorField  p {
+            animation: blinker 1s linear infinite;
+            margin: 0;
+            display: block;
+        }
+
+    .row {
+        max-width: 100%;
+        padding: 0.3rem;
+        flex-wrap: nowrap;
+    }
+    .dl {
+        margin: 0 9.5rem 0.313rem;
+    }
+        input.form-control {
+            max-width: 21rem;
+        }
+        .errorMark {
+            font-size: 1.5rem;
+            color: red;
+            padding: 0 0.313rem;
+            display: inline-block;
+        }
+    label.col-sm-2.col-form-label {
+        min-width: 6.7rem;
+        margin: 0 0 0 2.4rem;
+    }
+    .upload.form-control {
+        display: inline-block;
+    }
+    .col-md-6.btn.btn-lg {
+        margin: 0.625rem 0 0 14rem;
+        box-shadow: -19px 16px 30px -17px rgba(0,0,0,0.39);
+        -webkit-box-shadow: -19px 16px 30px -17px rgba(0,0,0,0.39);
+        -moz-box-shadow: -19px 16px 30px -17px rgba(0,0,0,0.39);
+        color: #4d4b4b;
+        font-weight: bold;
+        background-color: #b5b5de;
+        max-width: 9rem;
+        padding: 0;
+    }
+/* csvView */
+
+table {
+	min-width: 100%;
+}
+    th, td {
+        border: 1px solid black;
+        padding: 0.313rem;
+        text-align: center;
+    }
+.pageCount {
+    max-width: 100%;
+    text-align: center;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: blue;
+    padding: 0 0.5rem;
+}
+.pageCountWrapper {
+	text-align: center;
+    padding: 1rem 0 0 0 ;
+}
