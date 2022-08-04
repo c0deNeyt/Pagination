@@ -31,7 +31,6 @@
     // DISPLAY data into a table
     function displayData($f){
         $x = formatData($f);
-        echo "<table>"."\r\n";
         //Set the index if the get method not initiated
         $index = 0;
         // override index value if get method initiated
@@ -64,13 +63,12 @@
                 </tr>"."\r\n";
             }
         }
-        echo "</table>";
     }
     // this will display the clickable page count under the table
     function getPages($f){
         $x = formatData($f);
         for($c=1;$c<=(count($x)/50);$c++){
-            echo "<input class='pageCount' type='submit' name='page' value=".$c.">";
+            echo "              <input class='pageCount' type='submit' name='page' value=".$c.">"."\r\n";
         }
     }
     //list of uploaded files
@@ -78,7 +76,7 @@
         $path    = 'uploads';
         $files =  array_diff(scandir($path), array('.', '..'));
         foreach ($files as $key => $value) {
-            echo "<li><a class='fileName' href='#'>" .$value. "</a></li>";
+            echo "              <li><a class='fileName' href='#'>" .$value. "</a></li>"."\r\n";
         }
       }
     //Generate status message when uploading

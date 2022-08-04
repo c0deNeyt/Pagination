@@ -16,22 +16,22 @@ include('php/process.php');
     </head>
     <body>
       <div class="wrapper">
-        <form enctype="multipart/form-data"  autocomplete="off" class="form" action="php/process.php" method="post">
-          <h5 class="tittle">Excel to HTML with Pagination</h5>
-
- <?=       isset($_SESSION['msg'])? $_SESSION['msg'] : false;
+        <h5 class="tittle">Excel to HTML with Pagination</h5>
+<?=
+        isset($_SESSION['msg'])? $_SESSION['msg'] : false;
 ?>
-          <p class="dl">Down load the format <a href="format.csv">here.</a></p>
+        <p class="dl">Down load the format <a href="format.csv">here.</a></p>
+        <form enctype="multipart/form-data"  autocomplete="off" class="form" action="php/process.php" method="post">
           <div class="row">
             <label for="formFileMultiple" class="col-sm-2 col-form-label">Upload File</label>
             <div class="col-sm-10">
               <input type="hidden" name="uploadAction" value="up">
               <input name="fileUpload" type="file" hidden>
-<?php
+<?=
                 isset($_SESSION['fileVal'])? $val = $_SESSION['fileVal'] : $val = false;
 ?>
 <?=
-              "<input value='" .$val."' class='upload form-control' name='file' placeholder='Click to select file...'>";
+"              <input value='" .$val."' class='upload form-control' name='file' placeholder='Click to select file...'>"."\r\n";
 ?>
 <?=
               isset($_SESSION['file'])? $_SESSION['file'] : false;
@@ -39,21 +39,21 @@ include('php/process.php');
             </div>
           </div>
           <div div class="row">
-            <div class="col-sm-10">
-              <button type="submit" class="col-md-6 btn btn-lg">Upload</button>
-            </div>
+            <input type="submit" class="col-md-6 btn btn-lg" value="Upload">
           </div>
         </form>
         <div class="uploaded">
           <p>Uploaded Files:</p>
           <ol>
-            <?= showUploaded();?>
+<?=
+            showUploaded();
+?>
           </ol>
         </div>
       </div>
+      <form action="php/csvView.php" method="post">
+        <input class="fileName" type="hidden" name="fileName">
+        <input class="gotoPrev" type="submit" hidden>
+      </form>
     </body>
 </html>
-<form action="php/csvView.php" method="post">
-  <input class="fileName" type="hidden" name="fileName">
-  <input class="gotoPrev" type="submit" hidden>
-</form>

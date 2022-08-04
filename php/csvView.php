@@ -1,6 +1,5 @@
 <?php
     include_once("process.php");
-    // session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,12 +13,18 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-      <div class="wrapper">
+        <div class="wrapper">
         <h5 class="tittle">CSV File Data</h5>
         <form action="" method="get">
-         <?= displayData($filePath); ?>
+          <table>
+<?=
+          displayData($filePath);
+?>
+          </table>
           <div class="pageCountWrapper">
-            <?= getPages($filePath); ?>
+<?=
+          getPages($filePath);
+?>
           </div>
         </form>
       </div>
